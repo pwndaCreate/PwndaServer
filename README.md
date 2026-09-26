@@ -12,13 +12,10 @@ mining pool and non-custodial wallet service run as a one-person operation.
 - `docs/architecture.md` - how the whole system fits together, including the parts that are not
   published here.
 
-## What is deliberately not here
+## What is not here
 
-The payout engine, the exchange integrations, the admin dashboards and the swap tooling stay
-private. That is a boundary rather than an omission: they are the parts that move money, and a
-one-person operation cannot respond to a disclosed bug in them the way a team can. The
-architecture page describes them at design level, and details and a walkthrough are available on
-request.
+The payout engine, the exchange integrations, the admin dashboards. The
+architecture page describes them at design level
 
 The wallet client is a separate project and is already open source at
 [PwndaWallet](https://github.com/pwndaCreate/PwndaWallet) - a non-custodial wallet needs an
