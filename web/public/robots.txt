@@ -1,0 +1,48 @@
+# pwnda.org
+
+# Search + AI answer engines that send traffic: allowed everywhere.
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+
+# User-initiated fetches (someone pasted a link into an assistant): allowed.
+User-agent: ChatGPT-User
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Model-training crawlers: opted out. These do not drive traffic, so blocking
+# them costs no visibility - the answer-engine agents above are separate and
+# stay allowed.
+User-agent: GPTBot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: meta-externalagent
+Disallow: /
+
+# Everyone else. CSS and JS are deliberately NOT blocked - blocking them stops
+# crawlers rendering the page and is a self-inflicted ranking wound.
+User-agent: *
+Allow: /
+
+Sitemap: https://pwnda.org/sitemap.xml
